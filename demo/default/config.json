@@ -1,0 +1,137 @@
+{
+  "name"    : "GraydientTheme Demo",
+
+  "include" :
+  [
+    {
+      "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    }
+  ],
+
+  "export" :
+  [
+    "api",
+    "api-data",
+    "build",
+    "clean",
+    "distclean",
+    "fix",
+    "info",
+    "lint",
+    "migration",
+    "pretty",
+    "profiling",
+    "source",
+    "source-all",
+    "source-hybrid",
+    "source-server",
+    "source-server-reload",
+    "source-httpd-config",
+    "test",
+    "test-source",
+    "translation",
+    "validate-config",
+    "validate-manifest",
+    "watch"
+  ],
+  
+  "default-job" : "source-hybrid",
+
+  "let" :
+  {
+    "APPLICATION"  : "graydienttheme.demo",
+    "QOOXDOO_PATH" : "../../../qooxdoo/5.0.1",
+    "QXTHEME"      : "${APPLICATION}.theme.Theme",
+    "QXICONTHEME"  : ["Oxygen"],
+    "API_EXCLUDE"  : ["qx.test.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*", "${APPLICATION}.simulation.*"],
+    "LOCALES"      : [ "en" ],
+    "CACHE"        : "${TMPDIR}/qx${QOOXDOO_VERSION}/cache",
+    "ROOT"         : "."
+  },
+
+  "config-warnings" : 
+  {
+    "job-shadowing" : ["libraries"]
+  },
+
+  "jobs" :
+  {
+    "libraries" : 
+    {
+      "library" :
+      [
+        {
+          "manifest" : "../../Manifest.json"
+        },
+        {
+          "manifest" : "${QOOXDOO_PATH}/component/library/formdemo/Manifest.json"
+        }
+      ]
+    },
+    
+    "environment"  :
+    {
+      "qx.nativeScrollBars" : false
+    },
+
+    "common" :
+    {
+       "packages" :
+       {
+         "parts" :
+         {
+           "boot" :
+           {
+             "include" : [ "${APPLICATION}.Application", "${QXTHEME}" ]
+           },
+           
+           "form" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Form" ]
+           },
+           
+           "tree" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Tree" ]
+           },
+           
+           "list" :
+           {
+             "include" : [ "graydienttheme.demo.pages.List" ]
+           },
+           
+           "toolbar" :
+           {
+             "include" : [ "graydienttheme.demo.pages.ToolBar" ]
+           },
+           
+           "window" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Window" ]
+           },
+           
+           "tab" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Tab" ]
+           },
+           
+           "embed" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Embed" ]
+           },
+           
+           "embedframe" :
+           {
+             "include" : [ "graydienttheme.demo.pages.EmbedFrame" ]
+           },
+           
+           "misc" :
+           {
+             "include" : [ "graydienttheme.demo.pages.Misc" ]
+           }
+         }
+       }
+    }
+    
+  }
+}
