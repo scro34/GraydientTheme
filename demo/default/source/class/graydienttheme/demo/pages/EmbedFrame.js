@@ -46,9 +46,10 @@ qx.Class.define("graydienttheme.demo.pages.EmbedFrame",
       var label, left, right;
       var url = qx.util.ResourceManager.getInstance().toUri("graydienttheme/demo/blank.html");
 
-      var splitPane = new qx.ui.splitpane.Pane("horizontal").set({padding: 5});
-      // remove the background color for a better look
-      splitPane.getChildControl("splitter").setBackgroundColor(null);
+      var splitPane = new qx.ui.splitpane.Pane("horizontal").set({
+        padding: 5,
+        decorator: "input"
+      });
       this.add(splitPane);
 
       // Iframe

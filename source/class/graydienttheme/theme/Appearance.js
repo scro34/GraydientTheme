@@ -717,8 +717,7 @@ qx.Theme.define("graydienttheme.theme.Appearance",
           textColor: states.disabled || states.weekend ? "text-inactive" : undefined,
           textAlign: "center",
           paddingTop: 2,
-          backgroundColor: "background-medium",
-          font: "bold"
+          backgroundColor: "background-medium"
         };
       }
     },
@@ -1679,11 +1678,11 @@ qx.Theme.define("graydienttheme.theme.Appearance",
       style: function(states)
       {
         return {
-          decorator: "input"
+          decorator: undefined
         };
       }
     },
-
+    
     "splitpane/splitter":
     {
       style: function(states)
@@ -1699,6 +1698,10 @@ qx.Theme.define("graydienttheme.theme.Appearance",
       style: function(states)
       {
         return {
+          marginLeft: states.horizontal ? 1 : undefined,
+          marginRight: states.horizontal ? 1 : undefined,
+          marginTop: states.vertical ? 1 : undefined,
+          marginBottom: states.vertical ? 1 : undefined,
           source: states.horizontal ? graydienttheme.theme.Image.URLS["knob-horizontal"] : 
                                       graydienttheme.theme.Image.URLS["knob-vertical"]
         };

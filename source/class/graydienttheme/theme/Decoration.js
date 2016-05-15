@@ -922,8 +922,8 @@ qx.Theme.define("graydienttheme.theme.Decoration",
     {
       style:
       {
-        borderImage: "decoration/slider/slider-vertical.png",
-        slice: [5, 2]
+        backgroundImage: "decoration/splitpane/splitter-vertical.png",
+        backgroundRepeat: "repeat-y"
       }
     },
     
@@ -931,8 +931,8 @@ qx.Theme.define("graydienttheme.theme.Decoration",
     {
       style:
       {
-        borderImage: "decoration/slider/slider-horizontal.png",
-        slice: [5, 2]
+        backgroundImage: "decoration/splitpane/splitter-horizontal.png",
+        backgroundRepeat: "repeat-x"
       }
     },
 	

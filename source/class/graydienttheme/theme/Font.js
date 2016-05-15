@@ -31,7 +31,7 @@ qx.Theme.define("graydienttheme.theme.Font",
       lineHeight: 1.4,
       family: (qx.core.Environment.get("os.name") === "osx") ? 
         [ "Lucida Grande" ] : 
-        [ "Segoe UI", "MS Sans Serif", "sans-serif" ],
+        [ "Segoe UI", "MS Sans Serif", "Arial", "sans-serif" ],
       bold: true
     },
 
